@@ -8,7 +8,7 @@
 
 ### Composer
 
-> ℹ️ An example setup may be found in the [`example`](./example) directory.
+> ℹ️ An example setup may be found in the [`example`](../example) directory.
 
 To automatically patch the Kirby panel to support custom writer marks, add the following script your `composer.json` and run `composer update`:
 
@@ -32,7 +32,7 @@ If you don't use a Composer setup, you can just run `node ./patchKirbyPanel.js` 
 
 You may want to use one of [Kirby's writer marks](https://github.com/getkirby/kirby/tree/master/panel/src/components/Writer/Marks) as a base. 
 
-Save it in [`src/Writer/Marks`](./src/Writer/Marks) and initiate the custom mark class inside [`src/index.js`](./src/index.js).
+Save it in [`src/Writer/Marks`](../src/Writer/Marks) and initiate the custom mark class inside [`src/index.js`](../src/index.js).
 
 This setup adds a a custom **footnote mark**, which will create a `<article-footnote>` custom element. Styling included.
 
