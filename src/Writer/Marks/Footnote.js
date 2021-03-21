@@ -1,4 +1,4 @@
-import Mark from '../Mark.js'
+import Mark from '../Mark'
 
 export default class Footnote extends Mark {
   get button () {
@@ -12,12 +12,6 @@ export default class Footnote extends Mark {
     return () => this.toggle()
   }
 
-  keys () {
-    return {
-      'Mod-f': () => this.toggle()
-    }
-  }
-
   get name () {
     return 'footnote'
   }
@@ -25,9 +19,7 @@ export default class Footnote extends Mark {
   get schema () {
     return {
       parseDOM: [
-        {
-          tag: 'article-footnote'
-        }
+        { tag: 'article-footnote' }
       ],
       toDOM: node => ['article-footnote', {
         ...node.attrs
