@@ -1,0 +1,15 @@
+.k-blocks {
+  counter-reset: footnotes;
+}
+
+.k-writer .ProseMirror article-footnote {
+  color: currentColor;
+  counter-increment: footnotes;
+  text-decoration: underline dotted;
+}
+
+.k-writer .ProseMirror article-footnote::after {
+  content: "[" counter(footnotes) "]";
+  color: #999;
+  text-decoration: underline dotted white;
+}

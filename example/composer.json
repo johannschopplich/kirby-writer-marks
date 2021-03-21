@@ -1,0 +1,13 @@
+{
+  "require": {
+    "getkirby/cms": "^3.0"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "node ./patchKirbyPanel.js"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
