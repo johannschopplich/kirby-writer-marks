@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 // Extend writer field to support custom inline marks
-const path = 'kirby/cms/panel/dist/js/app.js'
+const path = 'kirby/panel/dist/js/app.js'
 const build = fs.readFileSync(path, 'utf8')
 const pattern = 'createMarks(){return this.filterExtensions({'
 const patch = pattern + '...window.panel.plugins.writer||{},'
