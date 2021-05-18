@@ -16,7 +16,7 @@ To automatically patch the Kirby panel to support custom writer marks, add the f
 {
   "scripts": {
     "post-update-cmd": [
-      "node ./patchKirbyPanel.js"
+      "node ./patchKirbyPanel.cjs"
     ]
   }
 }
@@ -24,7 +24,7 @@ To automatically patch the Kirby panel to support custom writer marks, add the f
 
 The patcher script itself is a Node script, which will bail if the Panel bundle has been patched already.
 
-If you don't use a Composer setup, you can just run `node ./patchKirbyPanel.js` as well. But remember to patch again when you have updated your Kirby instance.
+If you don't use a Composer setup, you can just run `node ./patchKirbyPanel.cjs` as well. But remember to patch again when you have updated your Kirby instance.
 
 ## Usage
 

@@ -4,7 +4,7 @@
   },
   "scripts": {
     "post-update-cmd": [
-      "node ./patchKirbyPanel.js"
+      "node ./patchKirbyPanel.cjs"
     ]
   },
   "config": {

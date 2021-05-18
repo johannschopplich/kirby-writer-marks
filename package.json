@@ -1,11 +1,10 @@
 {
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "esbuild --bundle --watch --outdir=. src/index.js",
     "build": "esbuild --bundle --minify --outdir=. src/index.js"
   },
   "devDependencies": {
-    "esbuild": "^0.9.6"
+    "esbuild": "^0.12.0"
   }
 }

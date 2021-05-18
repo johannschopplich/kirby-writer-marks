@@ -1,4 +1,4 @@
-import fs from 'fs'
+const fs = require('fs')
 
 // Extend writer field to support custom inline marks
 const path = 'kirby/panel/dist/js/app.js'
