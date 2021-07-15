@@ -1,29 +1,31 @@
-import Mark from '../Mark'
+import Mark from "../Mark";
 
 export default class Footnote extends Mark {
-  get button () {
+  get button() {
     return {
-      icon: 'quote',
-      label: 'Footnote'
-    }
+      icon: "quote",
+      label: "Footnote",
+    };
   }
 
-  commands () {
-    return () => this.toggle()
+  commands() {
+    return () => this.toggle();
   }
 
-  get name () {
-    return 'footnote'
+  get name() {
+    return "footnote";
   }
 
-  get schema () {
+  get schema() {
     return {
-      parseDOM: [
-        { tag: 'article-footnote' }
+      parseDOM: [{ tag: "article-footnote" }],
+      toDOM: (node) => [
+        "article-footnote",
+        {
+          ...node.attrs,
+        },
+        0,
       ],
-      toDOM: node => ['article-footnote', {
-        ...node.attrs
-      }, 0]
-    }
+    };
   }
 }
