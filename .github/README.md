@@ -11,6 +11,20 @@ This repository has two objectives:
 
 How does it work? The patcher simply extends the writer field marks object to include custom marks from the new global `window.panel.plugins.marks` property.
 
+## Installation
+
+> ℹ️ Since this repo is a plugin template, I recommend you fork it and include it manually into your `site/plugins` folder.
+
+### Download
+
+Download and copy this repository to `/site/plugins/kirby-writer-marks`.
+
+### Git submodule
+
+```
+git submodule add https://github.com/johannschopplich/kirby-writer-marks.git site/plugins/kirby-writer-marks
+```
+
 ## Setup
 
 Before using the plugin (boilerplate), you will have to patch the Kirby Panel.
@@ -25,7 +39,7 @@ The Composer setup (see below) is the preferred setup. If you don't use Composer
 node site/plugins/kirby-writer-marks/scripts/patchKirbyPanel.cjs
 ```
 
-> ℹ️ Remember to run the patcher again when you have updated your Kirby instance with a new version.
+Remember to run the patcher again when you have updated your Kirby instance with a new version!
 
 ### Composer
 
