@@ -1,10 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "esbuild --bundle --watch --outdir=. src/index.js",
-    "build": "esbuild --bundle --minify --outdir=. src/index.js"
+    "dev": "kirbyup src/panel/index.js --watch",
+    "build": "kirbyup src/panel/index.js",
+    "build:script": "esbuild src/node/patchKirbyPanel.ts --bundle --platform=node --target=node14 --outfile=scripts/patchKirbyPanel.cjs"
   },
   "devDependencies": {
-    "esbuild": "^0.12.15"
+    "@types/node": "^16.10.3",
+    "colorette": "^2.0.16",
+    "kirbyup": "^0.17.2"
   }
 }
