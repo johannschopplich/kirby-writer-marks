@@ -11,7 +11,5 @@ function initCustomMarks() {
  */
 export function registerCustomMark(data) {
   initCustomMarks();
-
-  // Custom marks need to be wrapped in a function
-  window.panel.plugins.marks.push(() => data);
+  window.panel.plugins.marks.push(data);
 }
