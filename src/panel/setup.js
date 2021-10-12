@@ -7,7 +7,7 @@ function initCustomMarks() {
 /**
  * Registers a custom writer mark
  *
- * @param {object} data Key value pair containing mark name and class
+ * @param {object} data Key value pair containing mark name and new class instance
  */
 export function registerCustomMark(data) {
   initCustomMarks();
