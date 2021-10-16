@@ -7,7 +7,7 @@ const path =
   "/panel/dist/js/app.js";
 const build = fs.readFileSync(path, "utf8");
 const pattern = "},this.marks)}";
-const patch = `,...("marks"in window.panel.plugins&&Array.isArray(window.panel.plugins.marks)?window.panel.plugins.marks.reduce((a,c)=>({...a,...c}),{}):{})${pattern}`;
+const patch = `,...("marks"in window.panel.plugins&&Array.isArray(window.panel.plugins.marks)?window.panel.plugins.marks.reduce((a,c)=>({...a,...c()}),{}):{})${pattern}`;
 
 async function main() {
   if (build.includes(patch)) {

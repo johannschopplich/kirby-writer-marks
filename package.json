@@ -6,8 +6,8 @@
     "build:script": "esbuild src/node/patchKirbyPanel.ts --bundle --platform=node --target=node14 --outfile=scripts/patchKirbyPanel.cjs"
   },
   "devDependencies": {
-    "@types/node": "^16.10.3",
+    "@types/node": "^16.11.0",
     "colorette": "^2.0.16",
-    "kirbyup": "^0.17.3"
+    "kirbyup": "^0.18.0"
   }
 }
