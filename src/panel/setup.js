@@ -1,12 +1,13 @@
 /**
  * Registers a custom writer mark
  *
- * @param {Function} data Fn returning key (mark name) value (class instance) pair
+ * @param {string} name Mark name
+ * @param {Function} fn Mark constructor
  */
-export function registerCustomMark(data) {
+export function registerCustomMark(name, fn) {
   if (!window.panel.plugins.marks) {
     window.panel.plugins.marks = [];
   }
 
-  window.panel.plugins.marks.push(data);
+  window.panel.plugins.marks.push([name, fn]);
 }

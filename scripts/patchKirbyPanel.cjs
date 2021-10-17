@@ -144,7 +144,7 @@ var {
 var path = (import_fs.default.existsSync("vendor/getkirby") ? "vendor/getkirby/cms" : "kirby") + "/panel/dist/js/app.js";
 var build = import_fs.default.readFileSync(path, "utf8");
 var pattern = "},this.marks)}";
-var patch = `,...("marks"in window.panel.plugins&&Array.isArray(window.panel.plugins.marks)?window.panel.plugins.marks.reduce((a,c)=>({...a,...c()}),{}):{})${pattern}`;
+var patch = ",...(window.panel.plugins.marks||[]).reduce((a,[n,f])=>({...a,n:new f()}),{})" + pattern;
 async function main() {
   if (build.includes(patch)) {
     console.log(`${green("\u2713")} Kirby Panel already patched to support custom writer marks.`);
