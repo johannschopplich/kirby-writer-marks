@@ -2,7 +2,7 @@
 
 # Custom Writer Field Marks (With Footnote Mark Example)
 
-> ℹ️ Kirby doesn't support custom writer marks at the moment. This will probably be added in future versions. Until then, here's a guide.
+> Kirby doesn't support custom writer marks at the moment. This will probably be added in future versions. Until then, here's a guide.
 
 This repository has two objectives:
 
@@ -28,6 +28,8 @@ git submodule add https://github.com/johannschopplich/kirby-writer-marks.git sit
 ## Setup
 
 Before using the plugin (boilerplate), you will have to patch the Kirby Panel.
+
+> ⚠️ Make sure to delete the `media/panel` folder after patching if you are running the patcher on an existing project.
 
 ### Plain
 
