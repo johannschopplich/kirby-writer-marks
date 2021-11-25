@@ -3,11 +3,12 @@
   "scripts": {
     "dev": "kirbyup src/panel/index.js --watch",
     "build": "kirbyup src/panel/index.js",
-    "build:script": "esbuild src/node/patchKirbyPanel.ts --bundle --platform=node --target=node14 --outfile=scripts/patchKirbyPanel.cjs"
+    "build:patcher": "esbuild src/node/patchKirbyPanel.ts --bundle --platform=node --target=node14 --outfile=scripts/patchKirbyPanel.cjs"
   },
   "devDependencies": {
-    "@types/node": "^16.11.5",
-    "colorette": "^2.0.16",
-    "kirbyup": "^0.19.1"
+    "@types/node": "^16.11.10",
+    "consola": "^2.15.3",
+    "esbuild": "^0.13.15",
+    "kirbyup": "^0.21.1"
   }
 }

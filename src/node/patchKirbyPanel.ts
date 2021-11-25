@@ -1,11 +1,6 @@
 import fs from "fs";
-import { green, red } from "colorette";
+import consola from "consola";
 
-// Extend writer field to support custom inline marks
-const path =
-  (fs.existsSync("vendor/getkirby") ? "vendor/getkirby/cms" : "kirby") +
-  "/panel/dist/js/app.js";
-const build = fs.readFileSync(path, "utf8");
 const pattern = "},this.marks)}";
 const patch =
   // Global `window.panel.plugins.marks` array or fallback
@@ -18,23 +13,34 @@ const patch =
   ",{})" +
   pattern;
 
+/**
+ * Extend writer field to support custom inline marks
+ */
 async function main() {
-  if (build.includes(patch)) {
-    console.log(
-      `${green(
-        "✓"
-      )} Kirby Panel already patched to support custom writer marks.`
-    );
+  consola.start("Kirby Panel patcher for custom writer marks");
 
+  const path =
+    (fs.existsSync("vendor/getkirby") ? "vendor/getkirby/cms" : "kirby") +
+    "/panel/dist/js/app.js";
+
+  if (!fs.existsSync(path)) {
+    consola.error("couldn't find Kirby. Is it installed?");
     return;
   }
 
-  console.log(green("Patching Kirby Panel to support custom writer marks..."));
+  const panel = fs.readFileSync(path, "utf8");
 
-  const output = build.replace(pattern, patch);
+  if (panel.includes(patch)) {
+    consola.success("already patched");
+    return;
+  }
+
+  consola.info("patching the Panel...");
+
+  const output = panel.replace(pattern, patch);
   fs.writeFileSync(path, output, "utf8");
 
-  console.log(`${green("✓")} Kirby Panel successfully patched.`);
+  consola.success("successfully patched");
 }
 
-main().catch((err) => console.error(red(err)));
+main().catch((err) => consola.error(err));
