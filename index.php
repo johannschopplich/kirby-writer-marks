@@ -1,19 +1,9 @@
 <?php
 
-use Kirby\Cms\App as Kirby;
-use Kirby\Sane\Html;
-use Kirby\Toolkit\A;
-
-Kirby::plugin('johannschopplich/footnote-mark', []);
-
 /*
- * Add `article-footnote` to Kirby's Sane class allowed tags,
- * otherwise the writer field content parsed by the sanitizer would
- * strip `article-footnote` tags
+ * Add `article-footnote` to Kirby's Sane class allowed tags, otherwise
+ * the writer field content parsed by the sanitizer would strip it
  */
-Html::$allowedTags = A::merge(
-    Html::$allowedTags,
-    [
-        'article-footnote' => true
-    ]
-);
+\Kirby\Sane\Html::$allowedTags['article-footnote'] = true;
+
+\Kirby\Cms\App::plugin('johannschopplich/kirby-writer-marks', []);

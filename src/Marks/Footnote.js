@@ -1,4 +1,4 @@
-import Mark from "../Writer/Mark";
+import Mark from "./Writer/Mark";
 
 export default class Footnote extends Mark {
   get button() {
