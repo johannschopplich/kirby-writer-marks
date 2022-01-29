@@ -24,7 +24,7 @@ git submodule add https://github.com/johannschopplich/kirby-writer-marks.git sit
 
 This plugin adds a custom **footnote mark**, which will create a `<article-footnote>` custom element. Styling included.
 
-You can create custom plugins yourself. To get inspiration, head over to Kirby's official [writer marks](https://github.com/getkirby/kirby/tree/master/panel/src/components/Writer/Marks).
+You can create custom plugins yourself. To get inspiration, head over to Kirby's official [writer marks](https://github.com/getkirby/kirby/tree/main/panel/src/components/Forms/Writer/Marks).
 
 Custom marks are located in [`src/Marks`](./src/Marks) and initiate inside [`src/index.js`](./src/index.js).
 
