@@ -2,9 +2,10 @@
   "private": true,
   "scripts": {
     "dev": "kirbyup src/index.js --watch",
+    "serve": "kirbyup serve src/index.js",
     "build": "kirbyup src/index.js"
   },
   "devDependencies": {
-    "kirbyup": "^0.21.1"
+    "kirbyup": "^2.0.2"
   }
 }
