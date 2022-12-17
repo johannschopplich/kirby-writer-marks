@@ -7,6 +7,7 @@ export default function (Vue) {
 
   const original = Vue.component("k-writer");
 
+  // eslint-disable-next-line vue/component-definition-name-casing
   Vue.component("k-writer", {
     extends: original,
     methods: {

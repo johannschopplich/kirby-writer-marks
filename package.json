@@ -3,9 +3,16 @@
   "scripts": {
     "dev": "kirbyup src/index.js --watch",
     "serve": "kirbyup serve src/index.js",
-    "build": "kirbyup src/index.js"
+    "build": "kirbyup src/index.js",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "format": "prettier --write \"src/**/*\""
   },
   "devDependencies": {
-    "kirbyup": "^2.0.2"
+    "@nuxt/eslint-config": "^0.1.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "kirbyup": "latest",
+    "prettier": "^2.8.1"
   }
 }
