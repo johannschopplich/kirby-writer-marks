@@ -1,3 +1,6 @@
+> [!NOTE]
+> Kirby 4 adds a lot of improvements to the writer field, including custom marks. This plugin is no longer needed and will not be maintained. Please use the native [writer marks](https://getkirby.com/releases/4.0/writer-field-improvements#custom-marks-nodes-extension) instead. Thank you!
+
 ![Footnote mark for the Kirby writer field](./writer-field-footnote.png)
 
 # Custom Writer Field Marks
