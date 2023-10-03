@@ -1,5 +1,6 @@
-> [!NOTE]
+> [!WARNING]
 > Kirby 4 adds a lot of improvements to the writer field, including custom marks. This plugin is no longer needed and will not be maintained. Please use the native [writer marks](https://getkirby.com/releases/4.0/writer-field-improvements) instead. Thank you!
+> You can still use this plugin as a boilerplate for your own custom marks in Kirby 3, although I recommend you to upgrade to Kirby 4.
 
 ****
 
